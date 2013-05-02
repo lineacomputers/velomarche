@@ -12,15 +12,14 @@ h5{	font-weight:800; font-family:'Open Sans', sans-serif!important;}
 }
 
 .page-content{
-	position: absolute;
-	z-index: 10;
-	width: 100%;
-	display: block;
-	background-image: url(../images/body-bg.png);
-	background-repeat: repeat;
-	top: 39px;
-	left: 1px;
+	position:absolute;
+	z-index:10;
+	width:100%;
+	display:block;
+	background-image:url(../images/body-bg.png);
+	background-repeat:repeat;
 }
+
 
 .page-sidebar{
 	background-image:url(../images/misc/menu-bg.png);
