@@ -25,11 +25,38 @@ jQuery(document).ready(function($) {
 	// submit form data starts	   
     function submitData(currentForm, formType){     
 		formSubmitted = 'true';		
-		var formInput = $('#' + currentForm).serialize();		
+		var formInput = $('#' + currentForm).serialize();
+		
+		var mail =$('#contactEmailField').val();
+		var name =$('#contactNameField').val();
+		var subject ='velomarche app - richiesta informazioni';
+		var messaggio =$('#contactMessageTextarea').val();
+		var destinatario='info@lineanet.it';
+	
+		  $.ajax({ url: "http://home.station.it/serviziomail/sendmail.asmx/SendMailLC",
+				data: {
+					MittenteIndirizzo: JSON.stringify(mail),
+					MittenteNome: JSON.stringify(name),
+					Oggetto: JSON.stringify(subject),
+					Corpo: JSON.stringify(messaggio),
+					Destinatario: JSON.stringify(destinatario)
+				},
+				dataType: "jsonp",
+				success: function (data) {
+					$('#' + currentForm).hide();
+					$('#formSuccessMessageWrap').fadeIn(500);		
+				},
+				error: function (request, status, error) {
+					$('#sendmailError').addClass('fieldHasError');
+					$('#sendmailError').fadeIn(300);
+				}
+			});
+		/*	
 		$.post($('#' + currentForm).attr('action'),formInput, function(data){			
 			$('#' + currentForm).hide();
 			$('#formSuccessMessageWrap').fadeIn(500);			
 		});
+		*/
 
 	};
 	// submit form data function starts	
@@ -70,6 +97,8 @@ jQuery(document).ready(function($) {
 	    return false;		
 	});
 	// contact button function ends
+	
+	
 	
 	
 	

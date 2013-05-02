@@ -90,11 +90,12 @@ info@velomarche.it</p>
             <div class="contact-form no-bottom"> 
                 <div class="formSuccessMessageWrap" id="formSuccessMessageWrap">
                     <div class="notification-box green-box">
-                        <h4>YOUR MESSAGE HAS BEEN SENT!</h4>
+                        <h4>IL TUO MESSAGGIO E' STATO INVIATO!</h4>
                         <a href="#" class="close-notification">x</a>
                         <div class="clear"></div>
                         <p>
-                            You're message has been successfully sent. Please allow up to 48 hours for us to reply!  
+                            Il tuo messaggio è stato inviato correttamente. 
+                            Verrai contattato entro 48 ore!
                         </p>  
                     </div> 
                 </div>
@@ -103,24 +104,29 @@ info@velomarche.it</p>
                     <fieldset>
                         <span class="formValidationError" id="contactNameFieldError">
                             <div class="small-notification red-notification">
-                                <p>Error Sending! Please enter your name!</p>
+                                <p>Errore! Digita il tuo nome!</p>
                             </div>
                         </span>             
                         <span class="formValidationError" id="contactEmailFieldError">
                             <div class="small-notification red-notification">
-                                <p>Error Sending! Mail address required!</p>
+                                <p>Errore! Digita il tuo indirizzo!</p>
                             </div>
                         </span> 
                         <span class="formValidationError" id="contactEmailFieldError2">
                             <div class="small-notification red-notification">
-                                <p>Error Sending! Valid Email Address Required</p>
+                                <p>Errore! Digita un indirizzo mail valido!</p>
                             </div>
                         </span> 
                         <span class="formValidationError" id="contactMessageTextareaError">
                             <div class="small-notification red-notification">
-                                <p>Error Sending! Message field is empty!</p>
+                                <p>Errore!Digita il tuo messaggio!</p>
                             </div>
                         </span>  
+                         <span class="formValidationError" id="sendmailError">
+                            <div class="small-notification red-notification">
+                                <p>Errore durante l'invio della mail</p>
+                            </div>
+                        </span> 
                         <div class="formFieldWrap">
                             <label class="field-title contactNameField" for="contactNameField">Name:<span>(required)</span></label>
                             <input type="text" name="contactNameField" value="" class="contactField requiredField" id="contactNameField"/>
