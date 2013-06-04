@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
 		var name =$('#contactNameField').val();
 		var subject ='velomarche app - richiesta informazioni';
 		var messaggio =$('#contactMessageTextarea').val();
-		var destinatario='info@lineanet.it';
+		var destinatario='info@velomarche.it';
 	
 		  $.ajax({ url: "http://home.station.it/serviziomail/sendmail.asmx/SendMailLC",
 				data: {
