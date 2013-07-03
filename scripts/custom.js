@@ -142,7 +142,7 @@ $(document).ready(function(){
 	var isiPod = 		navigator.userAgent.toLowerCase().indexOf("ipod");
 	var isiAndroid = 	navigator.userAgent.toLowerCase().indexOf("android");
 	
-	var isPhonegap = 	(typeof(cordova) !== 'undefined' || typeof(phonegap) !== 'undefined');
+	var isPhonegap = 	document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
 	
 	if(isiPhone > -1) 	 {		 $('.ipod-detected').hide();		 $('.ipad-detected').hide();		 $('.iphone-detected').show();		 $('.android-detected').hide();	 }
 	if(isiPad > -1)	 {		 	 $('.ipod-detected').hide();		 $('.ipad-detected').show();		 $('.iphone-detected').hide();		 $('.android-detected').hide();	 }
