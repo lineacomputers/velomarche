@@ -31,12 +31,12 @@ $(document).ready(function(){
 	  	}
 		
 	 }  
+	 
 	
-	
-
-
 	
 });
+
+
 // ***this goes on the global scope
 	// get querystring as an array split on "&"
 	var querystring = location.search.replace( '?', '' ).split( '&' );
